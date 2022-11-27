@@ -4,7 +4,7 @@
         "strictPropertyInitialization": false, /* Enable strict property initialization in your code. */
         "experimentalDecorators": true, /* Enable experimental support for ES7 decorators. */
         "moduleResolution": "node", /* Specify how TypeScript looks up a file from a given module specifier. */
-        "removeComments": true, /* Disable emitting comments. */
+        "removeComments": false, /* Disable emitting comments. */
         "allowSyntheticDefaultImports": true, /* Allow 'import x from y' when a module doesn't have a default export. */
         "allowUnreachableCode": false,
         "allowUnusedLabels": true,
