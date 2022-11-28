@@ -100,8 +100,8 @@ subscriptionRouter.post("/", (req: Request, res: Response) => controller.create(
 /**
  * @openapi
  * /subscriptions/{id}:
- *  delete:
- *   summary: Delete a subscription by id
+ *  put:
+ *   summary: Cancel a subscription by id
  *   parameters:
  *      - name: id
  *        required: true
@@ -110,8 +110,10 @@ subscriptionRouter.post("/", (req: Request, res: Response) => controller.create(
  *   responses:
  *    200:
  *     description: Success
+ *    400:
+ *     description: Bad request
  */
-subscriptionRouter.delete("/:id", (req: Request, res: Response) => controller.deleteById(req, res));
+subscriptionRouter.put("/:id", (req: Request, res: Response) => controller.cancelById(req, res));
 
 
 export default subscriptionRouter;

@@ -4,6 +4,7 @@ export interface SubscriptionInterface {
     gender: string;
     birthday: string;
     consent: boolean;
+    cancelledAt: Date;
 }
 
 export default SubscriptionInterface;

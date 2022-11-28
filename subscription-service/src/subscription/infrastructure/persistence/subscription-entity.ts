@@ -2,8 +2,7 @@ import { Entity, Column, PrimaryColumn } from "typeorm";
 import SubscriptionInterface from "../../domain/subscription-interface";
 
 @Entity("subscriptions")
-export class SubscriptionEntity implements SubscriptionInterface
-{
+export class SubscriptionEntity implements SubscriptionInterface {
 
     @PrimaryColumn()
     id: number;
@@ -22,6 +21,9 @@ export class SubscriptionEntity implements SubscriptionInterface
 
     @Column()
     consent: boolean;
+
+    @Column({ name: "cancelled_at" })
+    cancelledAt: Date;
 }
 
 

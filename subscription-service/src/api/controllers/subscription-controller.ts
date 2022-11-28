@@ -35,13 +35,16 @@ export class SubscriptionController extends BaseController {
         }
     }
 
-    async deleteById(req: Request, res: Response): Promise<void> {
+    async cancelById(req: Request, res: Response): Promise<void> {
         try {
             const id = parseInt(req.params.id);
-            const subscription = await container.get('executers.subscription.deleteById').run(id);
+            const subscription = await container.get('executers.subscription.cancelById').run(id);
             this.setData(subscription);
             if (subscription) {
-                this.setOk("subscription deleted");
+                this.setOk("subscription cancelled");
+            } else {
+                this.setError("subscription not found");
+                this.status = 400;
             }
         } catch (error: any) {
             this.setError(error.message);

@@ -28,8 +28,8 @@ export class SubscriptionRepository implements RepositoryInterface {
         return await this.repository.save(subscription);
     }
     
-    async deleteById(id: number): Promise<boolean> {
-        const result = await this.repository.delete(id);
+    async cancelById(id: number): Promise<boolean> {
+        const result = await this.repository.update(id, { cancelledAt: new Date() });
         return result.affected !== 0;
     }
 }
