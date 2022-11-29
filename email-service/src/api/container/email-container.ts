@@ -7,6 +7,7 @@ const container = new ContainerBuilder();
 container.register('handler.email', EmailHandler);
 
 container.register('executers.email.send', SendEmailCase);
+
 container.register('executers.email.queue', QueueEmailCase);
 
 export default container;
