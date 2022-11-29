@@ -1,12 +1,12 @@
 import RepositoryInterface from "../../domain/repository-interface";
 import { Repository, FindOneOptions } from "typeorm";
 import { SubscriptionEntity } from "./subscription-entity";
-import { appDataSource } from './datasource';
+import { DataSourceHandler } from '../handler/datasource-handler';
 import SubscriptionInterface from "src/subscription/domain/subscription-interface";
 
 export class SubscriptionRepository implements RepositoryInterface {
     constructor(
-        private repository: Repository<SubscriptionEntity> = appDataSource.getRepository(SubscriptionEntity)
+        private repository: Repository<SubscriptionEntity> = DataSourceHandler.getDt().getRepository(SubscriptionEntity)
     ) {
 
     }

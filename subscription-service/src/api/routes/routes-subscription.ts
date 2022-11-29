@@ -12,6 +12,8 @@ const controller = new SubscriptionController();
  *    Subscription:
  *     type: object
  *     properties:
+ *      id:
+ *           type: integer
  *      email:
  *           type: string
  *      name:
