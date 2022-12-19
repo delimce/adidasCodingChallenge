@@ -1,0 +1,13 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+     //   "declaration": true, //disable for watch
+        "baseUrl": "./",
+        "outDir": "./dist",
+        "composite": false
+    },
+    "exclude": [
+        "node_modules",
+        "./tests/**/*.ts"
+    ]
+}
