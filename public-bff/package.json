@@ -8,8 +8,8 @@
   "scripts": {
     "build": "rm -rf ./dist/ && tsc",
     "watch": "tsc -w",
-    "dev": "nodemon ./dist/bff/index",
-    "start": "tsc && ts-node ./dist/bff/index"
+    "dev": "nodemon ./dist/index",
+    "start": "tsc && ts-node ./dist/index"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
