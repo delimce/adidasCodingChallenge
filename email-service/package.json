@@ -29,7 +29,6 @@
     "ts-node": "^10.8.1"
   },
   "scripts": {
-    "test": "jest --detectOpenHandles",
     "build": "rm -rf ./dist/ && tsc",
     "watch": "tsc -w",
     "dev": "nodemon ./dist/api/index",

@@ -18,6 +18,12 @@ Nodejs backend challenge for a job application
 - Docker
 - Docker-compose
 
+## Solution & Architecture
+![bff_subs_diagram](https://user-images.githubusercontent.com/1078276/207610856-52756121-e575-42ff-86bf-4e1794009047.svg)
+
+I thought that the best way to solve this challenge was to create a microservices architecture based in a BFF (Backend for frontend) pattern. This way, the application can be scaled independently and the services can be deployed in different environments. The architecture is composed by 2 microservices and 1 BFF component as a simple interface between the frontend and microservices.
+
+
 
 ## Installation
 
